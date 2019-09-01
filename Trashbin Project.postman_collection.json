@@ -1,0 +1,1848 @@
+{
+	"info": {
+		"_postman_id": "ae00721a-e160-4c4c-a450-11080d5836e7",
+		"name": "Trashbin Project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Local Deployment",
+			"item": [
+				{
+					"name": "User",
+					"item": [
+						{
+							"name": "Get User details",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "trashbin",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/users/JimM",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"users",
+										"JimM"
+									]
+								},
+								"description": "localhost"
+							},
+							"response": []
+						},
+						{
+							"name": "Update User",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "trashbin",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"apartmentNo\": \"221 B Baker Street\",\n    \"lastname\": \"Holmess\",\n    \"mobile\": \"1234567891\"\n}"
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/users/U2",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"users",
+										"U2"
+									]
+								},
+								"description": "localhost"
+							},
+							"response": []
+						},
+						{
+							"name": "Delete User",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "trashbin",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "johnw",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/users/JimM",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"users",
+										"JimM"
+									]
+								},
+								"description": "localhost"
+							},
+							"response": []
+						},
+						{
+							"name": "Create User",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "trashbin",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"username\" : \"admin\",\n\t\"email\": \"trashbin.admin@trashbin.com\",\n    \"firstname\": \"Trashbin\",\n    \"lastname\": \"Admin\",\n\t\"mobile\" : \"0000000000\",\n\t\"password\" : \"trashbin\",\n\t\"apartmentNo\" : \"13 B\"\n}"
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/users",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"users"
+									]
+								},
+								"description": "localhost"
+							},
+							"response": []
+						},
+						{
+							"name": "Get Users",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "trashbin",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/users",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"users"
+									]
+								},
+								"description": "localhost"
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Trashcall Request",
+					"item": [
+						{
+							"name": "Place Trash call request",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "trashbin",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"requestorId\" : \"JohnW\",\n\t\"comments\" : \"collect garbage from sherlocks house\",\n\t\"garbageCollectionDate\" : \"2016-04-01\",\n\t\"timeOfDay\" : \"MORNING\"\n}"
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/trashcallrequests",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"trashcallrequests"
+									]
+								},
+								"description": "localhost"
+							},
+							"response": []
+						},
+						{
+							"name": "Get Trash call request details",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "trashbin",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/trashcallrequests/1",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"trashcallrequests",
+										"1"
+									]
+								},
+								"description": "localhost"
+							},
+							"response": []
+						},
+						{
+							"name": "Update Trash call request Status",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "trashbin",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"requestStatus\" : \"COLLECTED\"\n}"
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/trashcallrequests/1",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"trashcallrequests",
+										"1"
+									]
+								},
+								"description": "localhost"
+							},
+							"response": []
+						},
+						{
+							"name": "Get all Trash call requests",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "trashbin",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/trashcallrequests?",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"trashcallrequests"
+									],
+									"query": [
+										{
+											"key": "requeststatus",
+											"value": "1",
+											"disabled": true
+										},
+										{
+											"key": "offset",
+											"value": "1",
+											"disabled": true
+										},
+										{
+											"key": "limit",
+											"value": "2",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Trashcall request",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "trashbin",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/trashcallrequests/1",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"trashcallrequests",
+										"1"
+									]
+								},
+								"description": "localhost"
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Helper",
+					"item": [
+						{
+							"name": "Update Helper",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "trashbin",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"lastname\": \"Holmess\",\n    \"mobile\": \"1234567891\"\n}"
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/helpers/tika",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"helpers",
+										"tika"
+									]
+								},
+								"description": "localhost"
+							},
+							"response": []
+						},
+						{
+							"name": "Create Helper",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "trashbin",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"username\" : \"tika\",\n\t\"email\": \"tika@trashbin.com\",\n    \"firstname\": \"Tika\",\n    \"lastname\": \"BJGPH\",\n\t\"mobile\" : \"1231231234\",\n\t\"password\" : \"trashbin\"\n}"
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/helpers",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"helpers"
+									]
+								},
+								"description": "localhost"
+							},
+							"response": []
+						},
+						{
+							"name": "Get Helpers",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "trashbin",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/helpers",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"helpers"
+									]
+								},
+								"description": "localhost"
+							},
+							"response": []
+						},
+						{
+							"name": "Get helper details",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "trashbin",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/helpers/tika",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"helpers",
+										"tika"
+									]
+								},
+								"description": "localhost"
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Helper",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "trashbin",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/helpers/tika",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"helpers",
+										"tika"
+									]
+								},
+								"description": "AWS"
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Garbage Collection",
+					"item": [
+						{
+							"name": "Get Garbage collections",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "trashbin",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/garbagecollection",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"garbagecollection"
+									]
+								},
+								"description": "localhost"
+							},
+							"response": []
+						},
+						{
+							"name": "Create Garbage collection",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "trashbin",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"helperId\" : \"tika\",\n\t\"requestId\" : 7\n}"
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/garbagecollection",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"garbagecollection"
+									]
+								},
+								"description": "localhost"
+							},
+							"response": []
+						},
+						{
+							"name": "Update garbage collection details",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "trashbin",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{}"
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/garbagecollection/9",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"garbagecollection",
+										"9"
+									]
+								},
+								"description": "localhost"
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Garbage Collection",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "trashbin",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/garbagecollection/8",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"garbagecollection",
+										"8"
+									]
+								},
+								"description": "AWS"
+							},
+							"response": []
+						},
+						{
+							"name": "Get garbage collection details",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "trashbin",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/garbagecollection/9",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"garbagecollection",
+										"9"
+									]
+								},
+								"description": "Gets garbage collection details"
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Login",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "trashbin",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"username\" : \"JohnW\",\n\t\"password\" : \"abcd\"\n}"
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/userlogin",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"userlogin"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Running on localhost"
+		},
+		{
+			"name": "AWS Deployment",
+			"item": [
+				{
+					"name": "User",
+					"item": [
+						{
+							"name": "Create User - AWS",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										},
+										{
+											"key": "password",
+											"value": "trashbin",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"username\" : \"admin\",\n\t\"email\": \"trashbin.admin@trashbin.com\",\n    \"firstname\": \"Trashbin\",\n    \"lastname\": \"Admin\",\n\t\"mobile\" : \"0000000000\",\n\t\"password\" : \"trashbin\",\n\t\"apartmentNo\" : \"13 B\"\n}"
+								},
+								"url": {
+									"raw": "http://{{HOST}}:{{PORT}}/trashbin/webapi/users",
+									"protocol": "http",
+									"host": [
+										"{{HOST}}"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"trashbin",
+										"webapi",
+										"users"
+									]
+								},
+								"description": "Creates a new user"
+							},
+							"response": []
+						},
+						{
+							"name": "Delete User - AWS",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										},
+										{
+											"key": "password",
+											"value": "trashbin",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://{{HOST}}:{{PORT}}/trashbin/webapi/users/inspectorl",
+									"protocol": "http",
+									"host": [
+										"{{HOST}}"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"trashbin",
+										"webapi",
+										"users",
+										"inspectorl"
+									]
+								},
+								"description": "deletes an existing user"
+							},
+							"response": []
+						},
+						{
+							"name": "Get Users - AWS",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										},
+										{
+											"key": "password",
+											"value": "trashbin",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://{{HOST}}:{{PORT}}/trashbin/webapi/users/inspectorl",
+									"protocol": "http",
+									"host": [
+										"{{HOST}}"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"trashbin",
+										"webapi",
+										"users",
+										"inspectorl"
+									]
+								},
+								"description": "Gets all users"
+							},
+							"response": []
+						},
+						{
+							"name": "Get User details - AWS",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "trashbin",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://{{HOST}}:{{PORT}}/trashbin/webapi/users/JimM",
+									"protocol": "http",
+									"host": [
+										"{{HOST}}"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"trashbin",
+										"webapi",
+										"users",
+										"JimM"
+									]
+								},
+								"description": "Gets an existing user"
+							},
+							"response": []
+						},
+						{
+							"name": "Update User - AWS",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "trashbin",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"apartmentNo\": \"Castle Black\"\n}"
+								},
+								"url": {
+									"raw": "http://{{HOST}}:{{PORT}}/trashbin/webapi/users/johns",
+									"protocol": "http",
+									"host": [
+										"{{HOST}}"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"trashbin",
+										"webapi",
+										"users",
+										"johns"
+									]
+								},
+								"description": "Updates an existing user"
+							},
+							"response": []
+						}
+					],
+					"description": "AWS",
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Trashcall Request",
+					"item": [
+						{
+							"name": "Update Trash call request Status - AWS",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "trashbin",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"requestStatus\" : \"COLLECTED\"\n}"
+								},
+								"url": {
+									"raw": "http://{{HOST}}:{{PORT}}/trashbin/webapi/trashcallrequests/1",
+									"protocol": "http",
+									"host": [
+										"{{HOST}}"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"trashbin",
+										"webapi",
+										"trashcallrequests",
+										"1"
+									]
+								},
+								"description": "Updates status of an existing trashcall request"
+							},
+							"response": []
+						},
+						{
+							"name": "Place Trash call request - AWS",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "trashbin",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"requestorId\" : \"johns\",\n\t\"comments\" : \"collect garbage from Castle black\",\n\t\"garbageCollectionDate\" : \"2019-07-03\",\n\t\"timeOfDay\" : \"MORNING\"\n}"
+								},
+								"url": {
+									"raw": "http://{{HOST}}:{{PORT}}/trashbin/webapi/trashcallrequests",
+									"protocol": "http",
+									"host": [
+										"{{HOST}}"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"trashbin",
+										"webapi",
+										"trashcallrequests"
+									]
+								},
+								"description": "Creates a new trashcall request"
+							},
+							"response": []
+						},
+						{
+							"name": "Get Trash call request details - AWS",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "trashbin",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://{{HOST}}:{{PORT}}/trashbin/webapi/trashcallrequests/1",
+									"protocol": "http",
+									"host": [
+										"{{HOST}}"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"trashbin",
+										"webapi",
+										"trashcallrequests",
+										"1"
+									]
+								},
+								"description": "Gets a trashcall request details"
+							},
+							"response": []
+						},
+						{
+							"name": "Get all Trash call requests - AWS",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "trashbin",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://{{HOST}}:{{PORT}}/trashbin/webapi/trashcallrequests?requeststatus=1&offset=1&limit=2",
+									"protocol": "http",
+									"host": [
+										"{{HOST}}"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"trashbin",
+										"webapi",
+										"trashcallrequests"
+									],
+									"query": [
+										{
+											"key": "requeststatus",
+											"value": "1"
+										},
+										{
+											"key": "offset",
+											"value": "1"
+										},
+										{
+											"key": "limit",
+											"value": "2"
+										}
+									]
+								},
+								"description": "Gets all trashcall requests"
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Trashcall request - AWS",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "trashbin",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://{{HOST}}:{{PORT}}/trashbin/webapi/trashcallrequests/3",
+									"protocol": "http",
+									"host": [
+										"{{HOST}}"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"trashbin",
+										"webapi",
+										"trashcallrequests",
+										"3"
+									]
+								},
+								"description": "Deletes a Trashcall request"
+							},
+							"response": []
+						}
+					],
+					"description": "AWS",
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Helper",
+					"item": [
+						{
+							"name": "Create Helper - AWS",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "trashbin",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"username\" : \"tika\",\n\t\"email\": \"tika@trashbin.com\",\n    \"firstname\": \"Tika\",\n    \"lastname\": \"BJGPH\",\n\t\"mobile\" : \"1231231234\",\n\t\"password\" : \"trashbin\"\n}"
+								},
+								"url": {
+									"raw": "http://{{HOST}}:{{PORT}}/trashbin/webapi/helpers",
+									"protocol": "http",
+									"host": [
+										"{{HOST}}"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"trashbin",
+										"webapi",
+										"helpers"
+									]
+								},
+								"description": "Creates a new helper"
+							},
+							"response": []
+						},
+						{
+							"name": "Get Helpers - AWS",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "trashbin",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://{{HOST}}:{{PORT}}/trashbin/webapi/helpers",
+									"protocol": "http",
+									"host": [
+										"{{HOST}}"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"trashbin",
+										"webapi",
+										"helpers"
+									]
+								},
+								"description": "Gets all the helpers"
+							},
+							"response": []
+						},
+						{
+							"name": "Get helper details - AWS",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "trashbin",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://{{HOST}}:{{PORT}}/trashbin/webapi/helpers/tika",
+									"protocol": "http",
+									"host": [
+										"{{HOST}}"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"trashbin",
+										"webapi",
+										"helpers",
+										"tika"
+									]
+								},
+								"description": "Gets an existing helper details"
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Helper - AWS",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "trashbin",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://{{HOST}}:{{PORT}}/trashbin/webapi/helpers/tika",
+									"protocol": "http",
+									"host": [
+										"{{HOST}}"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"trashbin",
+										"webapi",
+										"helpers",
+										"tika"
+									]
+								},
+								"description": "deletes an existing helper"
+							},
+							"response": []
+						},
+						{
+							"name": "Update Helper - AWS",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "trashbin",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\": \"missandei@got.com\"\n}"
+								},
+								"url": {
+									"raw": "http://{{HOST}}:{{PORT}}/trashbin/webapi/helpers/missandei",
+									"protocol": "http",
+									"host": [
+										"{{HOST}}"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"trashbin",
+										"webapi",
+										"helpers",
+										"missandei"
+									]
+								},
+								"description": "Updates an existing helper"
+							},
+							"response": []
+						}
+					],
+					"description": "AWS",
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Garbage Collection",
+					"item": [
+						{
+							"name": "Get garbage collection details - AWS",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "trashbin",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://{{HOST}}:{{PORT}}/trashbin/webapi/garbagecollection/1",
+									"protocol": "http",
+									"host": [
+										"{{HOST}}"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"trashbin",
+										"webapi",
+										"garbagecollection",
+										"1"
+									]
+								},
+								"description": "Gets garbage collection details"
+							},
+							"response": []
+						},
+						{
+							"name": "Create Garbage collection - AWS",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "trashbin",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"helperId\" : \"tika\",\n\t\"requestId\" : 4\n}"
+								},
+								"url": {
+									"raw": "http://{{HOST}}:{{PORT}}/trashbin/webapi/garbagecollection",
+									"protocol": "http",
+									"host": [
+										"{{HOST}}"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"trashbin",
+										"webapi",
+										"garbagecollection"
+									]
+								},
+								"description": "Creates a new garbage collection"
+							},
+							"response": []
+						},
+						{
+							"name": "Get Garbage collections - AWS",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "trashbin",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://{{HOST}}:{{PORT}}/trashbin/webapi/garbagecollection",
+									"protocol": "http",
+									"host": [
+										"{{HOST}}"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"trashbin",
+										"webapi",
+										"garbagecollection"
+									]
+								},
+								"description": "Gets all garbage collections"
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Garbage Collection - AWS",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "trashbin",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://{{HOST}}:{{PORT}}/trashbin/webapi/garbagecollection/1",
+									"protocol": "http",
+									"host": [
+										"{{HOST}}"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"trashbin",
+										"webapi",
+										"garbagecollection",
+										"1"
+									]
+								},
+								"description": "Deletes a garbage collection"
+							},
+							"response": []
+						},
+						{
+							"name": "Update garbage collection details - AWS",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": [
+										{
+											"key": "password",
+											"value": "trashbin",
+											"type": "string"
+										},
+										{
+											"key": "username",
+											"value": "admin",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://{{HOST}}:{{PORT}}/trashbin/webapi/garbagecollection/1",
+									"protocol": "http",
+									"host": [
+										"{{HOST}}"
+									],
+									"port": "{{PORT}}",
+									"path": [
+										"trashbin",
+										"webapi",
+										"garbagecollection",
+										"1"
+									]
+								},
+								"description": "Updates a garbage collection"
+							},
+							"response": []
+						}
+					],
+					"description": "AWS",
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Login - AWS",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "trashbin",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "admin",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"warning": "This is a duplicate header and will be overridden by the Authorization header generated by Postman.",
+								"key": "Authorization",
+								"value": "Basic YWRtaW46dHJhc2hiaW4=",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"username\" : \"johns\",\n\t\"password\" : \"trashbin\"\n}"
+						},
+						"url": {
+							"raw": "http://{{HOST}}:{{PORT}}/trashbin/webapi/userlogin",
+							"protocol": "http",
+							"host": [
+								"{{HOST}}"
+							],
+							"port": "{{PORT}}",
+							"path": [
+								"trashbin",
+								"webapi",
+								"userlogin"
+							]
+						},
+						"description": "Authenticates a user"
+					},
+					"response": []
+				}
+			],
+			"description": "Running on AWS"
+		}
+	]
+}
